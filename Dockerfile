@@ -10,6 +10,7 @@ WORKDIR "/project"
 RUN apk update && \
     apk upgrade && \
     apk --update add \
+        linux-headers \
         maven \
         gcc \
         g++ \
