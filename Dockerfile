@@ -24,6 +24,8 @@ RUN apk update && \
         pip install -i https://mirrors.aliyun.com/pypi/simple/ conan && \
     rm -rf /var/cache/apk/*
 
+ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
+
 RUN cd /usr/bin && ln -s python3 python && ln -s pip3 pip
 
 ENTRYPOINT [ "bash", "-c" ]
